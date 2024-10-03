@@ -1,0 +1,227 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+@font-face {
+  font-family: "Inter";
+  font-weight: 400;
+  src: url("../fonts/static/Inter-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 700;
+  src: url("../fonts/static/Inter-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 800;
+  src: url("../fonts/static/Inter-ExtraBold.ttf") format("truetype");
+}
+.btn {
+  border: none;
+  outline: none;
+}
+:root {
+  --of-wight-color: #fffdfa;
+  --dark-blue-color: #00001a;
+  --selver-color: #c5c6ce;
+  --red-light-color: #f15d51;
+  --gunmetal-color: #5e607a;
+  --yellow-color: #e9aa52;
+}
+.container {
+  width: 100%;
+  max-width: 1110px;
+  margin: auto;
+  padding: 0 20px;
+}
+body {
+  padding: 89px 0 129px;
+}
+ul {
+  list-style: none;
+}
+
+/* start header  */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 55px;
+}
+
+.header .logo {
+  width: 64px;
+  height: auto;
+}
+.header .nav {
+  display: flex;
+  gap: 30px;
+}
+.header .nav-item {
+  padding: 10px;
+}
+.header .nav-link {
+  transition: color 150ms linear;
+  text-decoration: none;
+  color: var(--gunmetal-color);
+}
+.header .nav-link:hover {
+  color: var(--red-light-color);
+}
+.menu {
+  display: none;
+}
+@media (max-width: 767px) {
+  .menu {
+    display: inline-block;
+  }
+  .header .nav {
+    display: none;
+  }
+}
+/* end header  */
+/* start hero  */
+.hero {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.hero .body-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
+}
+.hero picture {
+  margin-bottom: 28px;
+  display: inline-block;
+}
+.hero picture img {
+  width: 100%;
+  object-fit: cover;
+  height: auto;
+}
+.hero .body-hero .head-hero {
+  color: var(--dark-blue-color);
+  font-size: 56px;
+  font-weight: 800;
+}
+.hero .body-hero .par-hero {
+  color: var(--gunmetal-color);
+  font-size: 15px;
+  line-height: 26px;
+  margin-bottom: 29px;
+}
+.hero .body-hero .btn-hero {
+  color: var(--dark-blue-color);
+  background-color: var(--red-light-color);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: capitalize;
+  padding: 12px 33px;
+  transition: all 150ms ease-in-out;
+}
+.hero .body-hero .btn-hero:hover {
+  color: var(--of-wight-color);
+  background-color: var(--dark-blue-color);
+}
+/* END hero  */
+
+/* start aside */
+.aside {
+  padding: 32px 24px;
+  background-color: var(--dark-blue-color);
+  color: var(--of-wight-color);
+}
+.header-aside {
+  text-transform: uppercase;
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--yellow-color);
+}
+
+.list-aside .head-aisde {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 24px;
+  margin-top: 31px;
+  display: inline-block;
+  color: var(--of-wight-color);
+  text-decoration: none;
+  transition: color 150ms linear;
+}
+.list-aside .head-aisde:hover {
+  color: var(--yellow-color);
+}
+.list-aside .head-aisde:nth-of-type(even) {
+  color: var(--yellow-color);
+}
+.list-aside .head-aisde:nth-of-type(even):hover {
+  color: var(--of-wight-color);
+}
+.list-aside .content-aisde {
+  font-size: 15px;
+  color: var(--selver-color);
+  line-height: 26px;
+  padding-bottom: 29px;
+}
+.list-aside .content-aisde:not(:last-child) {
+  border-bottom: 1px solid var(--gunmetal-color);
+}
+/* End aside */
+/* start cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 71px;
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: 608px) {
+    grid-template-columns: 1fr;
+  }
+}
+.card {
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  max-width: 350px;
+  width: 100%;
+}
+.card .img-card {
+  width: 100px;
+  height: auto;
+  object-fit: cover;
+}
+.card .num-card {
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 700;
+  color: var(--red-light-color);
+}
+.card .head-card {
+  margin-top: 12px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+  color: var(--dark-blue-color);
+}
+.card .content-card {
+  margin-top: 9px;
+  font-size: 15px;
+  line-height: 26px;
+  color: var(--gunmetal-color);
+}
+/* End cards */
